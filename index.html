@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Password Generator</title>
-</head>
-<body>
-    
-    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <br />
+      <br />
+      <div>
+        <label for="length"> Password Length: </label>
+        <input type="number" id="length" value="10" min="8" max="20" />
+      </div>
+      <!-- Add a div, and inside add 1 label for uppercase, and a checkbox  -->
+      <div>
+        <label for="uppercase">Include Uppercase</label>
+        <label class="slider-checkbox">
+          <input type="checkbox" name="uppercase" id="uppercase" />
+          <div class="slider"></div>
+        </label>
+      </div>
 
-<script src="script.js"></script>
-</body>
+      <!-- Add a div, and inside add 1 label for numbers, and a checkbox  -->
+      <div>
+        <label for="numbers">Include Numbers</label>
+        <label class="slider-checkbox">
+          <input type="checkbox" name="numbers" id="numbers" />
+          <div class="slider"></div>
+      </div>
+
+      <!-- Add a div, and inside add 1 label for symbols, and a checkbox  -->
+      <div>
+        <label for="symbols">Include Symbols</label>
+        <label class="slider-checkbox">
+          <input type="checkbox" name="symbols" id="symbols" />
+        </label>
+      </div>
+
+      <button id="generate" onclick="generatePassword()">Generate Password</button>
+      <div>
+        <label for="length"> Password Length: </label>
+        <input type="text" id="password" name="password" readonly />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
